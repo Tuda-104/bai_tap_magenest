@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="purchase_accountant_groups" model="ir.module.category">
+        <field name="name">Purchase Rules</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="groups_staff" model="res.groups">
+        <field name="name">Staff</field>
+        <field name="category_id" ref="purchase_accountant_groups"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="groups_accountant" model="res.groups">
+        <field name="name">Accountant</field>
+        <field name="category_id" ref="purchase_accountant_groups"/>
+        <field name="implied_ids" eval="[(4, ref('groups_staff'))]"/>
+    </record>
+
+</odoo>

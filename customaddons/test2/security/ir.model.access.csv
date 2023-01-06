@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_order_creation_limit,test2.order_creation_limit,model_order_creation_limit,groups_staff,1,1,1,1
+access_order_creation,test2.order_creation,model_order_creation,groups_staff,1,1,1,1
+access_report_accountant,test2.report_accountant,model_report_accountant,groups_staff,1,1,1,1

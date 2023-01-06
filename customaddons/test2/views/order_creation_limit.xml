@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="order_creation_limit_tree" model="ir.ui.view">
+        <field name="name">order.creation.limit.tree</field>
+        <field name="model">order.creation.limit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="staff_name" string="Tên nhân viên"/>
+                <field name="limit"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="order_creation_limit_form" model="ir.ui.view">
+        <field name="name">order.creation.limit.form</field>
+        <field name="model">order.creation.limit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="staff_name"/>
+                        <field name="limit"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="order_creation_limit_action" model="ir.actions.act_window">
+        <field name="name">Hạn mức tạo đơn hàng</field>
+        <field name="res_model">order.creation.limit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="order_creation_menu_root" parent="purchase.menu_purchase_root"
+              name="Hạn mức tạo đơn hàng"/>
+
+    <menuitem id="order_creation_limit_menu" parent="order_creation_menu_root"
+              name="Hạn mức tạo đơn hàng" action="order_creation_limit_action"/>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="department_production" model="hr.department">
+        <field name="name">Phòng sản xuất</field>
+    </record>
+
+    <record id="department_it" model="hr.department">
+        <field name="name">Phòng IT</field>
+    </record>
+</odoo>
