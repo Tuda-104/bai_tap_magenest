@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="s_indicator_evaluation_form" model="ir.ui.view">
+            <field name="name">s.indicator.evaluation.form</field>
+            <field name="model">indicator.evaluation</field>
+            <field name="inherit_id" ref="test1.indicator_evaluation_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='month_revenue']" position="after">
+                    <field name="actual_revenue_difference" readonly="0"/>
+                </xpath>
+            </field>
+    </record>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_accountant_email_employee,access_accountant_email employee,model_accountant_email,test1.group_staff,1,1,1,1

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="accountant_email_view_tree">
+            <field name="name">accountant.email.view.tree</field>
+            <field name="model">accountant.email</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="accountant_email_view_form">
+            <field name="name">accountant.email.view.form</field>
+            <field name="model">accountant.email</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="send_email" string="Gửi email" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="create_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="accountant_email_action">
+            <field name="name">Email kế toán </field>
+            <field name="res_model">accountant.email</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="accountant_email_menu" name="API Report" action="accountant_email_action"/>
+    </data>
+</odoo>
