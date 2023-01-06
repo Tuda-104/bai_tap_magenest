@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="s_report_indicator_evaluation_form" model="ir.ui.view">
+            <field name="name">report.indicator.evaluation.form</field>
+            <field name="model">s.report.indicator.evaluation</field>
+            <field name="arch" type="xml">
+                <form string="Báo cáo đánh giá chỉ tiêu">
+                    <group>
+                        <group>
+                            <field name="report_month"/>
+                        </group>
+                        <group>
+                            <field name="sale_order_id" widget="many2many_checkboxes"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="btn_export" string="Xuất dữ liệu" type="object" class="btn-primary"/>
+                        <button name="btn_cancel" string="Hủy" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="s_report_indicator_evaluation_action" model="ir.actions.act_window">
+            <field name="name">Báo Cáo đánh giá chỉ tiêu</field>
+            <field name="res_model">s.report.indicator.evaluation</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="s_report_indicator_evaluation_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="s_report_indicator_evaluation_menu" name="Báo Cáo Chỉ Tiêu" parent="crm.crm_menu_root"
+                  action="s_report_indicator_evaluation_action"/>
+    </data>
+</odoo>

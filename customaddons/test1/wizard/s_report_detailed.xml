@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="s_report_detailed_form" model="ir.ui.view">
+            <field name="name">report.detailed.form</field>
+            <field name="model">s.report.detailed</field>
+            <field name="arch" type="xml">
+                <form string="Báo cáo chi tiết">
+                    <group>
+                        <group>
+                            <field name="report_month"/>
+                        </group>
+                        <group>
+                            <field name="sale_order_id" widget="many2many_checkboxes"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="btn_export" string="Xuất dữ liệu" type="object" class="btn-primary"/>
+                        <button name="btn_cancel" string="Hủy" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="s_report_detailed_action" model="ir.actions.act_window">
+            <field name="name">Báo Cáo Chi Tiết</field>
+            <field name="res_model">s.report.detailed</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="s_report_detailed_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="s_report_detailed_menu" name="Báo Cáo Chi Tiết" parent="crm.crm_menu_root"
+                  action="s_report_detailed_action"/>
+    </data>
+</odoo>

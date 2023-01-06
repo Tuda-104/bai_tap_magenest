@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_plan_sale_order_staff,plan_sale_order staff,model_plan_sale_order,group_staff,1,1,1,1
+access_approver_list_staff,approver_list staff,model_approver_list,group_staff,1,1,1,1
+access_s_report_detailed_staff,s_report_detailed staff,model_s_report_detailed,group_staff,1,1,1,1
+access_s_report_indicator_evaluation_staff,s_s_report_indicator_evaluation staff,model_s_report_indicator_evaluation,group_staff,1,1,1,1
+access_indicator_evaluation_staff,indicator_evaluation staff,model_indicator_evaluation,group_staff,1,1,1,1
+
